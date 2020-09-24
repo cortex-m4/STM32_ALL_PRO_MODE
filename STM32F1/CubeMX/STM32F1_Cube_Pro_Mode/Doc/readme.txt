@@ -1,0 +1,1 @@
+generate code for STM32CUBEMX v5.6.1
