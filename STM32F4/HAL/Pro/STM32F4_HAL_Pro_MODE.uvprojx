@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>STM32F4_STD_PRO_MODE</TargetName>
+      <TargetName>STM32F4_HAL_Pro_MODE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
@@ -49,10 +49,10 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>STM32F4_STD_PRO_MODE</OutputName>
+          <OutputName>STM32F4_HAL_Pro_MODE</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -337,9 +337,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER,STM32F410xx</Define>
+              <Define>STM32F410XX,USE_HAL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\APP;..\STM32Lib\Core;..\STM32Lib\inc;..\USER</IncludePath>
+              <IncludePath>..\APP;..\STM32HAL_Lib\Core;..\STM32HAL_Lib\Inc;..\STM32HAL_Lib\Inc\Legacy;..\USER</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,34 +384,39 @@
           <GroupName>CORE</GroupName>
           <Files>
             <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\STM32Lib\Core\system_stm32f4xx.c</FilePath>
+              <FileName>startup_stm32f410rx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\STM32HAL_Lib\Core\startup_stm32f410rx.s</FilePath>
             </File>
             <File>
-              <FileName>startup_stm32f410xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\STM32Lib\Core\startup_stm32f410xx.s</FilePath>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32HAL_Lib\Core\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>STM32F4Lib</GroupName>
+          <GroupName>STM32F4HAL_Lib</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32f4xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\STM32Lib\src\misc.c</FilePath>
+              <FilePath>..\STM32HAL_Lib\Src\stm32f4xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_gpio.c</FileName>
+              <FileName>stm32f4xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\STM32Lib\src\stm32f4xx_gpio.c</FilePath>
+              <FilePath>..\STM32HAL_Lib\Src\stm32f4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileName>stm32f4xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\STM32Lib\src\stm32f4xx_rcc.c</FilePath>
+              <FilePath>..\STM32HAL_Lib\Src\stm32f4xx_hal_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32HAL_Lib\Src\stm32f4xx_hal_rcc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -435,13 +440,6 @@
         </Group>
         <Group>
           <GroupName>Doc</GroupName>
-          <Files>
-            <File>
-              <FileName>readme.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Doc\readme.txt</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>
