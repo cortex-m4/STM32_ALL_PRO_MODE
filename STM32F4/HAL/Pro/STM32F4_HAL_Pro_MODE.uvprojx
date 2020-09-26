@@ -433,10 +433,22 @@
               <FileType>1</FileType>
               <FilePath>..\USER\stm32f4xx_it.c</FilePath>
             </File>
+            <File>
+              <FileName>MY_Systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\MY_Systick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>MY_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\MY_GPIO.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Doc</GroupName>

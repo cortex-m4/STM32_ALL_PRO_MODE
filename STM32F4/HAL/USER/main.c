@@ -71,19 +71,20 @@ int main(void)
   handled in milliseconds basis.
   - Low Level Initialization
   */
-  HAL_Init();
+	HAL_Init();
 
-  /* Configure the system clock to 100 MHz */
-  SystemClock_Config();
+	/* Configure the system clock to 100 MHz */
+	SystemClock_Config();
 
-  /* Add your application code here
+	/* Add your application code here
      */
+	Init_LED();
   /* Infinite loop */
-  while (1)
-  {
-	  
-	  
-  }
+	while (1)
+	{
+	  LED_TOGGLE;
+	  Delay_ms(500);
+	}
 }
 
 /**
