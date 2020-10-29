@@ -54,6 +54,12 @@ int main(void)
 	
 	LED_GPIO_Init();
      
+	UART_ALL_Init();
+	
+	Delay_ms(500);
+	
+	printf("hello,world\r\n");
+	
 	/* Infinite loop */
 	while (1)
 	{

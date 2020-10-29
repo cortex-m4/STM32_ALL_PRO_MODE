@@ -31,7 +31,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx.h"
-
+#include "MY_Uart.h"
+#include "MY_DMA.h"
 #include "MY_GPIO.h"
 #include "MY_Systick.h"
 /* Exported types ------------------------------------------------------------*/
